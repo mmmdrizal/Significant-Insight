@@ -22,5 +22,5 @@
 
 
 # Work Flow
-![Work Flow](https://github.com/mmmdrizal/Significant-Insight/blob/main/Image/Blank%20diagram%20-%20Page%201.png)
+![Work Flow](https://github.com/mmmdrizal/Significant-Insight/blob/main/Image/Work%20Flow.png)
 
