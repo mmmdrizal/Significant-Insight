@@ -18,8 +18,12 @@
 - [Folder Structure](#open_file_folder-folder-structure)
 - [Tim Penulis](#tim-penulis)
 
-# Sekilas Project
+# 🌍 Sekilas Project
+Ketahanan pangan merupakan isu global yang krusial, terlebih di negara berkembang seperti Indonesia. Ketimpangan distribusi pangan antar wilayah mengharuskan adanya pendekatan berbasis data yang efisien dan akurat untuk:
 
+- Mengidentifikasi daerah rawan pangan
+- Menganalisis indikator utama ketahanan pangan
+- Memberikan rekomendasi strategis berbasis data
 
 # Work Flow
 ![Work Flow](https://github.com/mmmdrizal/Significant-Insight/blob/main/Image/Work%20Flow.png)
@@ -28,13 +32,6 @@
 
 **Significant Insight** adalah proyek akhir dari Praktikum SML (Statistik dan Machine Learning) yang bertujuan untuk mendukung pencapaian *Sustainable Development Goals* (SDGs) ke-2: **Zero Hunger**, melalui analisis dan prediksi tingkat kerentanan ketahanan pangan di Indonesia.
 
-## 🌍 Latar Belakang
-
-Ketahanan pangan merupakan isu global yang krusial, terlebih di negara berkembang seperti Indonesia. Ketimpangan distribusi pangan antar wilayah mengharuskan adanya pendekatan berbasis data yang efisien dan akurat untuk:
-
-- Mengidentifikasi daerah rawan pangan
-- Menganalisis indikator utama ketahanan pangan
-- Memberikan rekomendasi strategis berbasis data
 
 ## ❓ Rumusan Masalah
 
