@@ -16,9 +16,9 @@
 
 [Sekilas Project](#-sekilas-project)
 •
-[Work Flow](#Work-Flow)
+[Work Flow](#-Work-Flow)
 •
-[Data dan Metode](#books-Demo)
+[Data dan Metode](#-data-dan-metode)
 •
 [Significant-Insight](#panda_face-ASK-Man)
 
@@ -36,11 +36,11 @@ Proyek ini didesain sebagai kontribusi terhadap pencapaian Tujuan Pembangunan Be
 Dengan pendekatan ini, diharapkan pengambilan kebijakan ketahanan pangan di Indonesia dapat menjadi lebih tepat sasaran dan berkelanjutan.
 
 
-# Work Flow
+# 🔄 Work Flow
 ![Work Flow](https://github.com/mmmdrizal/Significant-Insight/blob/main/Image/Work%20Flow.png)
 
 # 📁 Data dan Metode
-### Dataset
+### 📁 Dataset
 - **Sumber:** Portal Data Indonesia ([data.go.id](https://data.go.id)), Badan Pusat Statistik ([bps.go.id](https://bps.go.id))
 - **Cakupan:** 514 kabupaten/kota di Indonesia selama 6 tahun (3.084 observasi)
 - **Fitur:** Beragam indikator sosial-ekonomi dan pangan
