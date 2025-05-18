@@ -17,10 +17,7 @@
 - [Deskripsi Data](#Deskripsi-Data)
 - [Folder Structure](#open_file_folder-folder-structure)
 - [Tim Penulis](#tim-penulis)
-- # Daftar Isi
-- [📌 Sekilas Project](#sekilas-project)
-- [🎥 Demo](#demo)
-- [🗂️ Skema Database](#skema-database)
+
 
 ## 📌 Sekilas Project
 Project ini berfokus pada analisis data dan machine learning pada isu ketahanan pangan di Indonesia. Dengan memanfaatkan data dari 514 kabupaten/kota selama enam tahun, proyek ini bertujuan untuk:
