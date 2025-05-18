@@ -9,8 +9,8 @@
 ---
 
 # Daftar Isi
-- [Sekilas Project](#Sekilas_Project)
-- [Work Fllow](#Work_Flow)
+- [Sekilas Project](#sekilas_project)
+- [Work Fllow](#work_flow)
 - [Demo](#demo)
 - [Skema Database](#Skema-Database)
 - [ERD](#ERD)
