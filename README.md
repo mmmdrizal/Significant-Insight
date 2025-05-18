@@ -10,7 +10,7 @@
 
 # Daftar Isi
 - [Sekilas Project](#sekilas_project)
-- [Work Fllow](#work_flow)
+- [Work Flow](#Work_Flow)
 - [Demo](#demo)
 - [Skema Database](#Skema-Database)
 - [ERD](#ERD)
@@ -22,7 +22,7 @@
 - [🎥 Demo](#demo)
 - [🗂️ Skema Database](#skema-database)
 
-# 📌 Sekilas Project
+## 📌 Sekilas Project
 Project ini berfokus pada analisis data dan machine learning pada isu ketahanan pangan di Indonesia. Dengan memanfaatkan data dari 514 kabupaten/kota selama enam tahun, proyek ini bertujuan untuk:
 
 - Mengidentifikasi wilayah-wilayah rawan pangan
@@ -41,7 +41,7 @@ Ketahanan pangan merupakan isu global yang krusial, terlebih di negara berkemban
 - Menganalisis indikator utama ketahanan pangan
 - Memberikan rekomendasi strategis berbasis data
 
-# Work Flow
+## Work Flow
 ![Work Flow](https://github.com/mmmdrizal/Significant-Insight/blob/main/Image/Work%20Flow.png)
 
 # Significant Insight - Machine Learning for Food Security Analysis
