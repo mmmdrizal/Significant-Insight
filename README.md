@@ -8,7 +8,7 @@
 
 ---
 
-# ☕Daftar Isi
+# Daftar Isi
 - [Sekilas Project](#Sekilas_Project)
 - [Work Fllow](#Work_Flow)
 - [Demo](#demo)
@@ -17,8 +17,25 @@
 - [Deskripsi Data](#Deskripsi-Data)
 - [Folder Structure](#open_file_folder-folder-structure)
 - [Tim Penulis](#tim-penulis)
+- # Daftar Isi
+- [📌 Sekilas Project](#sekilas-project)
+- [🔄 Work Flow](#work-flow)
+- [🎥 Demo](#demo)
+- [🗂️ Skema Database](#skema-database)
 
-# 🌍 Sekilas Project
+# 📌 Sekilas Project
+Project ini berfokus pada analisis data dan machine learning pada isu ketahanan pangan di Indonesia. Dengan memanfaatkan data dari 514 kabupaten/kota selama enam tahun, proyek ini bertujuan untuk:
+
+- Mengidentifikasi wilayah-wilayah rawan pangan
+- Memprediksi tingkat kerentanan pangan di masa depan
+- Memberikan wawasan berbasis data untuk mendukung kebijakan pemerintah
+
+Proyek ini didesain sebagai kontribusi terhadap pencapaian Tujuan Pembangunan Berkelanjutan (SDGs) nomor 2: **Zero Hunger**, dengan mengintegrasikan teknik klasifikasi dan clustering menggunakan algoritma machine learning seperti **Random Forest**, **XGBoost**, **Hierarchical Clustering**, dan **DBSCAN**.
+
+Dengan pendekatan ini, diharapkan pengambilan kebijakan ketahanan pangan di Indonesia dapat menjadi lebih tepat sasaran dan berkelanjutan.
+
+
+# 🌍 Latar Belakang
 Ketahanan pangan merupakan isu global yang krusial, terlebih di negara berkembang seperti Indonesia. Ketimpangan distribusi pangan antar wilayah mengharuskan adanya pendekatan berbasis data yang efisien dan akurat untuk:
 
 - Mengidentifikasi daerah rawan pangan
