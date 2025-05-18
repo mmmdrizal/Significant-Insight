@@ -9,7 +9,7 @@
 ---
 
 # Daftar Isi
-- [Sekilas Project](#sekilas-project)
+- [Sekilas Project](#-sekilas-project)
 - [Work Flow](#Work-Flow)
 - [Demo](#demo)
 - [Skema Database](#Skema-Database)
