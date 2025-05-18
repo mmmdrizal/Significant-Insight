@@ -1,14 +1,14 @@
 <div align="center">
-  <img width="1920" height="250" src="https://github.com/mmmdrizal/Significant-Insight/blob/main/Image/Header%20Github%20Significant%20Insight%20-%20Project%20Akhir%20Praktikum%20SML.png">
+
+# Significant-Insight
 
 
 ---
-# Significant-Insight  
+
+  <img width="1920" height="250" src="https://github.com/mmmdrizal/Significant-Insight/blob/main/Image/Header%20Github%20Significant%20Insight%20-%20Project%20Akhir%20Praktikum%20SML.png">
+
+---
 ### Pengelompokan Daerah Rawan Pangan untuk Mendukung Pencapaian SDGs ke-2 Zero Hunger Menggunakan Machine Learning
-
-
-
-
 ---
 
 
@@ -25,7 +25,7 @@
 
 </div>
 
-# 📌 Sekilas Project
+# 🌍 Sekilas Project
 Project ini berfokus pada analisis data dan machine learning pada isu ketahanan pangan di Indonesia. Dengan memanfaatkan data dari 514 kabupaten/kota selama enam tahun, proyek ini bertujuan untuk:
 
 - Mengidentifikasi wilayah-wilayah rawan pangan
@@ -36,13 +36,6 @@ Proyek ini didesain sebagai kontribusi terhadap pencapaian Tujuan Pembangunan Be
 
 Dengan pendekatan ini, diharapkan pengambilan kebijakan ketahanan pangan di Indonesia dapat menjadi lebih tepat sasaran dan berkelanjutan.
 
-
-# 🌍 Latar Belakang
-Ketahanan pangan merupakan isu global yang krusial, terlebih di negara berkembang seperti Indonesia. Ketimpangan distribusi pangan antar wilayah mengharuskan adanya pendekatan berbasis data yang efisien dan akurat untuk:
-
-- Mengidentifikasi daerah rawan pangan
-- Menganalisis indikator utama ketahanan pangan
-- Memberikan rekomendasi strategis berbasis data
 
 # Work Flow
 ![Work Flow](https://github.com/mmmdrizal/Significant-Insight/blob/main/Image/Work%20Flow.png)
