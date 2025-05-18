@@ -6,6 +6,10 @@
 
 </div>
 
+<div align="center">
+  <img width="1920" height="250" src="https://github.com/mmmdrizal/Significant-Insight/blob/main/Image/Header%20Github%20Significant%20Insight%20-%20Project%20Akhir%20Praktikum%20SML.png">
+</div>
+
 ---
 
 # Daftar Isi
