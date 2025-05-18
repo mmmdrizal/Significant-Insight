@@ -9,7 +9,7 @@
 ---
 
 # Daftar Isi
-- [Sekilas Project](#Sekilas_Project)
+- [Sekilas Project](#📌_Sekilas_Project)
 - [Work Fllow](#Work_Flow)
 - [Demo](#demo)
 - [Skema Database](#Skema-Database)
@@ -19,7 +19,6 @@
 - [Tim Penulis](#tim-penulis)
 - # Daftar Isi
 - [📌 Sekilas Project](#sekilas-project)
-- [🔄 Work Flow](#work-flow)
 - [🎥 Demo](#demo)
 - [🗂️ Skema Database](#skema-database)
 
