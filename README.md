@@ -12,16 +12,19 @@
 
 ---
 
-# Daftar Isi
-- [Sekilas Project](#-sekilas-project)
-- [Work Flow](#Work-Flow)
-- [Demo](#demo)
-- [Skema Database](#Skema-Database)
-- [ERD](#ERD)
-- [Deskripsi Data](#Deskripsi-Data)
-- [Folder Structure](#open_file_folder-folder-structure)
-- [Tim Penulis](#tim-penulis)
 
+<p align="center">
+
+
+[Sekilas Project](#-sekilas-project)
+•
+[Work Flow](#Work-Flow)
+•
+[Demo dan Alur Project](#books-Demo)
+•
+[ASK-Man](#panda_face-ASK-Man)
+
+</div>
 
 # 📌 Sekilas Project
 Project ini berfokus pada analisis data dan machine learning pada isu ketahanan pangan di Indonesia. Dengan memanfaatkan data dari 514 kabupaten/kota selama enam tahun, proyek ini bertujuan untuk:
