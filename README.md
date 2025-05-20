@@ -74,10 +74,10 @@ Temuan dari analisis ini dapat menjadi dasar kebijakan berbasis data bagi pemeri
 Dengan memanfaatkan pendekatan machine learning, proyek ini menunjukkan bagaimana data dapat dimanfaatkan untuk mengidentifikasi masalah krusial dalam ketahanan pangan secara objektif. Kombinasi teknik klasifikasi dan clustering mampu memberikan arah yang lebih presisi bagi pengambil kebijakan untuk menentukan wilayah prioritas dan mengalokasikan sumber daya secara lebih efektif dan berkelanjutan.
 
 # Tim
-- Wawan Saputra
-- Muhammad Rizal
-- Siti Nuradilla
-- Nisa Nur Aisyah
+- [Wawan Saputra](https://github.com/wawan2105)
+- [Muhammad Rizal](https://github.com/rizalmmd)
+- [Siti Nuradilla](https://github.com/nradillas) 
+- [Nisa Nur Aisyah](https://github.com/nisanuraisyah)
 
 
 
