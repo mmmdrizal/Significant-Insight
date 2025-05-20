@@ -75,7 +75,7 @@ Dengan memanfaatkan pendekatan machine learning, proyek ini menunjukkan bagaiman
 
 # Tim
 - [Wawan Saputra](https://github.com/wawan2105)
-- [Muhammad Rizal](https://github.com/rizalmmd)
+- [Muhammad Rizal](https://github.com/mmmdrizal)
 - [Siti Nuradilla](https://github.com/nradillas) 
 - [Nisa Nur Aisyah](https://github.com/nisanuraisyah)
 
