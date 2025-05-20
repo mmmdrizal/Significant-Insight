@@ -38,6 +38,7 @@ Dengan pendekatan ini, diharapkan pengambilan kebijakan ketahanan pangan di Indo
 
 # 🔄 Work Flow
 ![Work Flow](https://github.com/mmmdrizal/Significant-Insight/blob/main/Image/Work%20Flow.png)
+Workflow ini dirancang dalam menemukan model klasifikasi terbaik berbasis machine learning untuk mengidentifikasi daerah rentan pangan dan melakukan clustering untuk mengungkap karakteristik tiap daerah. Proses dimulai dengan analisis data eksploratif, dilanjutkan dengan pembagian data (70% training, 30% testing). Tiga model utama yang digunakan adalah Random Forest, LightGBM, dan XGBoost, dengan berbagai teknik penanganan outlier dan data imbalance. Model terbaik dievaluasi menggunakan data testing. Selanjutnya, fitur penting dipilih untuk proses clustering menggunakan algoritma DBSCAN dan HDBSCAN. Hasil clustering diinterpretasikan untuk memahami pola kerentanan pangan antar daerah.
 
 # 📁 Data dan Metode
 ### 📁 Dataset
