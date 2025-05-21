@@ -62,14 +62,6 @@ Analisis diawali dengan exploratory data analysis (EDA) untuk memahami distribus
 | 4  | XGB IQR - No Handling  | 0.9747               |
 | 5  | RF IQR - SMOTE         | 0.9718               |
 
-aatau
-
-#### Top 5 Teknik Machine Learning Berdasarkan F1 Score
-
-|              | LGBM IQR - No Handling | XGB IQR SMOTE | LGBM IQR - SMOTE | XGB IQR - No Handling | RF IQR - SMOTE |
-|--------------|------------------------|---------------|------------------|------------------------|----------------|
-| **F1 Score** | 0.9838                 | 0.9804        | 0.9771           | 0.9747                 | 0.9718         |
-
 
 Berdasarkan hasil evaluasi, kombinasi LightGBM dengan penanganan outlier menggunakan IQR dan tanpa penanganan imbalance terbukti memberikan performa terbaik. Model ini tidak hanya unggul dalam akurasi, tetapi juga dalam konsistensi prediksi, yang tercermin dari nilai F1 Score tertinggi. Model ini juga digunakan untuk mengekstraksi enam fitur paling penting yang berpengaruh terhadap ketahanan pangan, yaitu: NCPR, Kemiskinan (%), Tanpa Air Bersih (%), Angka Harapan Hidup (tahun), Jumlah Penduduk (rasio), dan Tanpa Listrik (%).
 
