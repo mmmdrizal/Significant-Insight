@@ -80,12 +80,34 @@ Terakhir, 21 wilayah di luar dua klaster utama dikategorikan sebagai outlier ole
 
 # Rekomendasi Kebijakan
 
-Temuan dari analisis ini dapat menjadi dasar kebijakan berbasis data bagi pemerintah. Wilayah-wilayah dalam klaster paling rentan perlu dijadikan prioritas utama dalam intervensi. Beberapa rekomendasi kebijakan yang disarankan:
+Hasil analisis clustering memberikan gambaran nyata mengenai perbedaan tingkat kerentanan antar wilayah di Indonesia. Oleh karena itu, strategi kebijakan yang diambil sebaiknya diferensiatif—artinya, menyesuaikan intervensi berdasarkan tingkat kebutuhan dan kerentanan masing-masing klaster. Melalui pendekatan ini, tujuan utama adalah mendorong transformasi wilayah paling rentan (Cluster 1) menjadi wilayah yang setara secara infrastruktur dan kesejahteraan. Sementara itu, wilayah stabil (Cluster 0) dipertahankan dan dikembangkan agar menjadi pusat ketahanan pangan yang berkelanjutan, dan wilayah tidak merata (Cluster -1) diarahkan agar bergerak ke arah kestabilan melalui intervensi kontekstual dan berbasis data.
 
-- Pembangunan infrastruktur dasar seperti air bersih dan listrik.
-- Program pengurangan kemiskinan berbasis wilayah.
-- Intervensi gizi dan kesehatan masyarakat yang difokuskan ke daerah dengan skor kerentanan tinggi.
-- Monitoring indikator kunci secara berkelanjutan melalui sistem informasi nasional.
+## 🟥 Cluster 1 – Prioritas Utama / Kritis dan Terisolasi
+Wilayah dalam klaster ini memiliki indikator kerentanan yang sangat tinggi: kemiskinan ekstrem, akses air bersih yang sangat minim (bahkan mendekati tidak ada), tingkat elektrifikasi rendah, serta angka harapan hidup yang relatif pendek.
+
+Rekomendasi kebijakan:
+
+- Pembangunan infrastruktur dasar secara agresif, terutama penyediaan air bersih dan listrik melalui program padat karya dan energi terbarukan (solar panel, sumur bor bersubsidi, dll).
+- Program penanggulangan kemiskinan terpadu, berbasis komunitas dan didampingi secara aktif oleh pemerintah daerah dan pusat.
+- Layanan kesehatan dan gizi berbasis komunitas (puskesmas keliling, bantuan gizi ibu & anak), mengingat angka harapan hidup dan kemungkinan prevalensi stunting yang tinggi.
+- Pendekatan lintas sektor dan cepat, karena kondisi klaster ini bisa menjadi sumber ketimpangan dan kerawanan sosial yang meluas jika tidak ditangani segera.
+
+## 🟩 Cluster 0 – Stabil dan Mandiri / Stabil dan Aman
+Klaster ini berisi mayoritas wilayah yang memiliki ketahanan pangan relatif baik, infrastruktur memadai, dan angka harapan hidup tinggi. Namun bukan berarti tanpa risiko—potensi kemunduran tetap ada jika tidak dipelihara.
+
+Rekomendasi kebijakan:
+- Fokus pada peningkatan kualitas layanan publik, seperti efisiensi distribusi pangan, transparansi bantuan sosial, dan modernisasi pertanian.
+- Program pencegahan kerentanan baru, seperti perlindungan terhadap guncangan ekonomi (inflasi pangan, bencana alam) dan digitalisasi sistem monitoring pangan lokal.
+- Penguatan tata kelola dan inovasi lokal, termasuk pelibatan pemerintah daerah dan komunitas dalam perencanaan dan pengawasan distribusi pangan.
+
+## 🟨 Cluster -1 – Perhatian Khusus / Tertinggal dan Tidak Merata
+Wilayah-wilayah dalam klaster ini memiliki karakteristik yang variatif dan kompleks. Sebagian memiliki populasi sangat besar tapi tetap rentan (DBSCAN), sebagian lain menunjukkan kombinasi indikator sedang-tinggi namun tidak homogen (HDBSCAN). Mereka tidak sepenuhnya ekstrem, namun menunjukkan pola risiko yang tidak konsisten.
+
+Rekomendasi kebijakan:
+- Diagnostik lanjutan berbasis lokal diperlukan untuk memahami penyebab kerentanan spesifik per wilayah. Bisa melalui pengumpulan data lapangan tambahan atau integrasi data sektoral (kemiskinan, sanitasi, pendidikan).
+- Desain intervensi adaptif dan fleksibel, misalnya dengan memberikan dana insentif berbasis indikator kinerja daerah (performance-based grant) agar solusi ditentukan oleh daerah masing-masing.
+- Pendampingan dan penguatan kapasitas pemerintah daerah, terutama dalam perencanaan dan pemanfaatan dana pembangunan daerah yang lebih tepat sasaran.
+
 
 # Penutup
 Dengan memanfaatkan pendekatan machine learning, proyek ini menunjukkan bagaimana data dapat dimanfaatkan untuk mengidentifikasi masalah krusial dalam ketahanan pangan secara objektif. Kombinasi teknik klasifikasi dan clustering mampu memberikan arah yang lebih presisi bagi pengambil kebijakan untuk menentukan wilayah prioritas dan mengalokasikan sumber daya secara lebih efektif dan berkelanjutan.
