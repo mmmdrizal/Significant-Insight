@@ -46,19 +46,36 @@ Workflow ini dirancang dalam menemukan model klasifikasi terbaik berbasis machin
 
 atau
 
-Analisis dimulai dengan eksplorasi data (EDA) dan dilanjutkan dengan penanganan outlier menggunakan beberapa teknik: IQR, Z-Score, Isolation Forest, dan Local Outlier Factor (LOF). Selanjutnya, dilakukan pemodelan klasifikasi menggunakan tiga algoritma utama: Random Forest, LightGBM, dan XGBoost. Berdasarkan hasil evaluasi, kombinasi penanganan outlir menggunakan IQR dan LightGBM menjadi model terbaik untuk memprediksi status ketahanan pangan kabupaten/kota. Dari model ini, diperoleh enam variabel terpenting yang berpengaruh besar terhadap ketahanan pangan: NCPR, Kemiskinan (%), Tanpa Air Bersih (%), Angka Harapan Hidup (tahun), Jumlah Penduduk (rasio), dan Tanpa Listrik (%).
+Analisis diawali dengan eksplorasi data (EDA) untuk memahami distribusi, hubungan antar variabel, serta mendeteksi potensi masalah data seperti outlier. Penanganan outlier dilakukan menggunakan beberapa metode, yakni IQR (Interquartile Range), Z-Score, Isolation Forest, dan Local Outlier Factor (LOF). Selain itu, karena distribusi kelas dalam data bersifat tidak seimbang (imbalanced), dilakukan beberapa pendekatan untuk menanganinya: tanpa penanganan (baseline), SMOTE (Synthetic Minority Over-sampling Technique), dan undersampling.
 
-Untuk mendalami karakteristik wilayah rawan pangan, dilakukan proses clustering hanya pada data tahun 2023 menggunakan enam variabel terpenting hasil klasifikasi. Dua metode clustering digunakan, yaitu DBSCAN dan HDBSCAN. Hasil evaluasi menunjukkan bahwa kedua metode berhasil mengelompokkan wilayah dengan cukup baik, ditandai dengan nilai Silhouette Score di atas 0.55. DBSCAN menghasilkan tiga kelompok, yaitu klaster utama dengan 493 kabupaten/kota, klaster minor dengan 9 kabupaten/kota, dan 12 wilayah yang dianggap sebagai outlier (tidak masuk ke dalam klaster mana pun). Sementara itu, HDBSCAN membentuk klaster utama dengan 488 anggota, klaster minor dengan 5 anggota, dan 21 wilayah yang dikategorikan sebagai outlier. Distribusi ini menunjukkan bahwa sebagian besar wilayah tergolong dalam klaster utama, tetapi terdapat sejumlah kecil daerah yang secara konsisten dikelompokkan sebagai klaster rentan atau outlier, yang patut menjadi perhatian utama dalam kebijakan intervensi.
+Selanjutnya, dilakukan pemodelan klasifikasi untuk memprediksi status ketahanan pangan menggunakan tiga algoritma utama: Random Forest, LightGBM, dan XGBoost. Berdasarkan hasil evaluasi model, kombinasi terbaik diperoleh dari data yang telah ditangani dengan metode IQR (untuk outlier), tanpa penanganan imbalance, serta model LightGBM. Model ini memberikan hasil prediksi paling optimal dan digunakan untuk mengekstraksi enam feature importance yang berkontribusi terhadap status ketahanan pangan, yaitu: NCPR, Kemiskinan (%), Tanpa Air Bersih (%), Angka Harapan Hidup (tahun), Jumlah Penduduk (rasio), dan Tanpa Listrik (%).
 
-# Clustering
+Untuk memahami lebih dalam karakteristik wilayah rawan pangan, dilakukan proses clustering pada data tahun 2023 untuk menggambarkan kondisi terkini dengan hanya menggunakan enam feature importance hasil dari klasifikasi sebelumnya. Dua metode clustering yang digunakan adalah DBSCAN dan HDBSCAN. Evaluasi menunjukkan bahwa keduanya berhasil membentuk klaster dengan baik, ditandai oleh nilai Silhouette Score di atas 0.55, yang menandakan pemisahan klaster yang cukup jelas.
+
+Hasil dari DBSCAN menunjukkan tiga kelompok: klaster utama yang mencakup 493 kabupaten/kota, klaster minor dengan 9 kabupaten/kota yang memiliki tingkat kerentanan tinggi, serta 12 wilayah lainnya yang termasuk kategori moderat. Sedangkan hasil dari HDBSCAN membentuk pola serupa, dengan klaster utama berisi 488 kabupaten/kota, klaster rentan sebanyak 5 kabupaten/kota, dan 21 wilayah lainnya yang dikategorikan sebagai moderat.
+
+# Clustering DBSCAN
+
+| Cluster | NCPR   | Kemiskinan (%) | Tanpa Air Bersih (%) | Angka Harapan Hidup (tahun) | Jumlah Penduduk (Rasio) | Tanpa Listrik (%) |
+|----------------|--------|----------------|------------------------|-----------------------------|--------------------------|--------------------|
+| -1             | 3.68   | 26.74          | 64.81                  | 63.82                       | 1,013,888                | 33.16              |
+| 0              | 1.16   | 10.88          | 28.82                  | 70.16                       | 538,180                 | 1.13               |
+| 1              | 5.00   | 35.55          | 86.83                  | 65.49                       | 134,059                 | 27.09              |
+
 Berdasarkan hasil clustering menggunakan metode DBSCAN, ditemukan tiga kelompok wilayah. Cluster 1 terdiri dari sembilan kabupaten/kota yang menunjukkan kondisi paling rentan: tingkat kemiskinan sangat tinggi (rata-rata 35,55%), mayoritas penduduk tidak memiliki akses terhadap air bersih (86,83%), dan sekitar 27% tidak memiliki listrik. Angka harapan hidup di wilayah ini juga lebih rendah dibanding klaster lain. Wilayah dalam klaster ini tergolong sangat tertinggal, terpencil, dan membutuhkan perhatian lintas sektor secara menyeluruh. Oleh karena itu, klaster ini dinamakan Prioritas Utama.
 
 Sementara itu, Cluster 0 mencakup mayoritas wilayah (493 kabupaten/kota) yang menunjukkan kondisi relatif stabil. Tingkat kemiskinan cukup rendah (10,88%), akses air dan listrik memadai, dan angka harapan hidup berada di kisaran tertinggi (70,15 tahun). Wilayah dalam klaster ini cenderung mandiri dan bisa difokuskan pada pemeliharaan serta penguatan program yang sudah berjalan. Klaster ini diberi nama Stabil dan Mandiri. Di sisi lain, terdapat 12 wilayah yang tergolong outlier (Cluster -1), dengan ciri populasi besar (lebih dari 1 juta), namun masih memiliki tingkat kemiskinan tinggi, akses listrik dan air bersih yang buruk, serta angka harapan hidup rendah. Karena sifatnya yang tidak masuk ke dalam pola umum dan memiliki beban tinggi, kelompok ini disebut Perhatian Khusus.
 
+# Clustering HDBSCAN
+| Cluster | NCPR   | Kemiskinan (%) | Tanpa Air Bersih (%) | Angka Harapan Hidup (tahun) | Jumlah Penduduk (Rasio) | Tanpa Listrik (%) |
+|-----------------|--------|----------------|------------------------|-----------------------------|--------------------------|--------------------|
+| -1              | 3.77   | 25.95          | 65.37                  | 64.30                       | 656,779                 | 25.97              |
+| 0               | 1.15   | 10.81          | 28.53                  | 70.21                       | 541,456                 | 1.06               |
+| 1               | 5.00   | 36.82          | 94.83                  | 66.20                       | 134,703                 | 27.12              |
+
 Hasil clustering menggunakan HDBSCAN juga menunjukkan pola yang konsisten. Cluster 1 (5 kabupaten/kota) memiliki karakteristik mirip dengan DBSCAN Cluster 1: kemiskinan ekstrem (36,82%), tanpa air bersih hampir total (94,83%), dan tanpa listrik lebih dari seperempat penduduknya. Klaster ini diberi label Kritis dan Terisolasi karena menggambarkan daerah dengan ketertinggalan infrastruktur dan sosial yang sangat mendalam. Sementara itu, Cluster 0 (488 kabupaten/kota) menunjukkan ciri wilayah dengan ketahanan pangan yang relatif baik. Infrastruktur dasar tersedia, angka harapan hidup tinggi, dan tingkat kemiskinan rendah, sehingga dinamakan Stabil dan Aman.
 
 Terakhir, 21 wilayah di luar dua klaster utama dikategorikan sebagai outlier oleh HDBSCAN (Cluster -1). Mereka menunjukkan karakteristik yang lebih variatif dan kompleks—kemiskinan relatif tinggi, kualitas layanan dasar buruk, dan penduduk dalam jumlah sedang. Kelompok ini tidak homogen, sehingga perlu pendekatan berbasis kajian lebih lanjut agar solusi intervensi dapat disesuaikan dengan kebutuhan masing-masing daerah. Klaster ini dinamakan Tertinggal dan Tidak Merata.
-
 
 
 # Rekomendasi Kebijakan
