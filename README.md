@@ -51,9 +51,27 @@ Workflow ini dirancang dalam menemukan model klasifikasi terbaik berbasis machin
 
 atau
 
-Analisis diawali dengan eksplorasi data (EDA) untuk memahami distribusi, hubungan antar variabel, serta mendeteksi potensi masalah data seperti outlier. Penanganan outlier dilakukan menggunakan beberapa metode, yakni IQR (Interquartile Range), Z-Score, Isolation Forest, dan Local Outlier Factor (LOF). Selain itu, karena distribusi kelas dalam data bersifat tidak seimbang (imbalanced), dilakukan beberapa pendekatan untuk menanganinya: tanpa penanganan (baseline), SMOTE (Synthetic Minority Over-sampling Technique), dan undersampling.
+Analisis diawali dengan exploratory data analysis (EDA) untuk memahami distribusi, hubungan antar variabel, serta mendeteksi potensi masalah data seperti outlier. Penanganan outlier dilakukan menggunakan beberapa metode, yakni IQR (Interquartile Range), Z-Score, Isolation Forest, dan Local Outlier Factor (LOF). Selain itu, karena distribusi kelas dalam data bersifat tidak seimbang (imbalanced), diterapkan beberapa pendekatan untuk menanganinya, yaitu: tanpa penanganan (baseline), SMOTE (Synthetic Minority Over-sampling Technique), dan undersampling. Selanjutnya, dilakukan pemodelan klasifikasi untuk memprediksi status ketahanan pangan menggunakan tiga algoritma utama: Random Forest, LightGBM, dan XGBoost. Setiap kombinasi model, teknik penanganan outlier, dan strategi imbalance diuji untuk menemukan konfigurasi terbaik.
 
-Selanjutnya, dilakukan pemodelan klasifikasi untuk memprediksi status ketahanan pangan menggunakan tiga algoritma utama: Random Forest, LightGBM, dan XGBoost. Berdasarkan hasil evaluasi model, kombinasi terbaik diperoleh dari data yang telah ditangani dengan metode IQR (untuk outlier), tanpa penanganan imbalance, serta model LightGBM. Model ini memberikan hasil prediksi paling optimal dan digunakan untuk mengekstraksi enam feature importance yang berkontribusi terhadap status ketahanan pangan, yaitu: NCPR, Kemiskinan (%), Tanpa Air Bersih (%), Angka Harapan Hidup (tahun), Jumlah Penduduk (rasio), dan Tanpa Listrik (%).
+#### Top 5 Teknik Machine Learning Berdasarkan F1 Score
+| No | Teknik                | F1 Score    |
+|----|------------------------|----------------------|
+| 1  | LGBM IQR - No Handling | **0.9838**           |
+| 2  | XGB IQR SMOTE          | 0.9804               |
+| 3  | LGBM IQR - SMOTE       | 0.9771               |
+| 4  | XGB IQR - No Handling  | 0.9747               |
+| 5  | RF IQR - SMOTE         | 0.9718               |
+
+aatau
+
+#### Top 5 Teknik Machine Learning Berdasarkan F1 Score
+
+|              | LGBM IQR - No Handling | XGB IQR SMOTE | LGBM IQR - SMOTE | XGB IQR - No Handling | RF IQR - SMOTE |
+|--------------|------------------------|---------------|------------------|------------------------|----------------|
+| **F1 Score** | 0.9838                 | 0.9804        | 0.9771           | 0.9747                 | 0.9718         |
+
+
+Berdasarkan hasil evaluasi, kombinasi LightGBM dengan penanganan outlier menggunakan IQR dan tanpa penanganan imbalance terbukti memberikan performa terbaik. Model ini tidak hanya unggul dalam akurasi, tetapi juga dalam konsistensi prediksi, yang tercermin dari nilai F1 Score tertinggi. Model ini juga digunakan untuk mengekstraksi enam fitur paling penting yang berpengaruh terhadap ketahanan pangan, yaitu: NCPR, Kemiskinan (%), Tanpa Air Bersih (%), Angka Harapan Hidup (tahun), Jumlah Penduduk (rasio), dan Tanpa Listrik (%).
 
 Untuk memahami lebih dalam karakteristik wilayah rawan pangan, dilakukan proses clustering pada data tahun 2023 untuk menggambarkan kondisi terkini dengan hanya menggunakan enam feature importance hasil dari klasifikasi sebelumnya. Dua metode clustering yang digunakan adalah DBSCAN dan HDBSCAN. Evaluasi menunjukkan bahwa keduanya berhasil membentuk klaster dengan baik, ditandai oleh nilai Silhouette Score di atas 0.55, yang menandakan pemisahan klaster yang cukup jelas.
 
@@ -87,7 +105,7 @@ Terakhir, 21 wilayah di luar dua klaster utama dikategorikan sebagai outlier ole
 
 Hasil analisis clustering memberikan gambaran nyata mengenai perbedaan tingkat kerentanan antar wilayah di Indonesia. Oleh karena itu, strategi kebijakan yang diambil sebaiknya diferensiatif—artinya, menyesuaikan intervensi berdasarkan tingkat kebutuhan dan kerentanan masing-masing klaster. Melalui pendekatan ini, tujuan utama adalah mendorong transformasi wilayah paling rentan (Cluster 1) menjadi wilayah yang setara secara infrastruktur dan kesejahteraan. Sementara itu, wilayah stabil (Cluster 0) dipertahankan dan dikembangkan agar menjadi pusat ketahanan pangan yang berkelanjutan, dan wilayah tidak merata (Cluster -1) diarahkan agar bergerak ke arah kestabilan melalui intervensi kontekstual dan berbasis data.
 
-## 🟥 Cluster 1 – Prioritas Utama / Kritis dan Terisolasi
+### 🟥 Cluster 1 – Prioritas Utama / Kritis dan Terisolasi
 Wilayah dalam klaster ini memiliki indikator kerentanan yang sangat tinggi: kemiskinan ekstrem, akses air bersih yang sangat minim (bahkan mendekati tidak ada), tingkat elektrifikasi rendah, serta angka harapan hidup yang relatif pendek.
 
 Rekomendasi kebijakan:
@@ -97,7 +115,7 @@ Rekomendasi kebijakan:
 - Layanan kesehatan dan gizi berbasis komunitas (puskesmas keliling, bantuan gizi ibu & anak), mengingat angka harapan hidup dan kemungkinan prevalensi stunting yang tinggi.
 - Pendekatan lintas sektor dan cepat, karena kondisi klaster ini bisa menjadi sumber ketimpangan dan kerawanan sosial yang meluas jika tidak ditangani segera.
 
-## 🟩 Cluster 0 – Stabil dan Mandiri / Stabil dan Aman
+### 🟩 Cluster 0 – Stabil dan Mandiri / Stabil dan Aman
 Klaster ini berisi mayoritas wilayah yang memiliki ketahanan pangan relatif baik, infrastruktur memadai, dan angka harapan hidup tinggi. Namun bukan berarti tanpa risiko—potensi kemunduran tetap ada jika tidak dipelihara.
 
 Rekomendasi kebijakan:
@@ -105,7 +123,7 @@ Rekomendasi kebijakan:
 - Program pencegahan kerentanan baru, seperti perlindungan terhadap guncangan ekonomi (inflasi pangan, bencana alam) dan digitalisasi sistem monitoring pangan lokal.
 - Penguatan tata kelola dan inovasi lokal, termasuk pelibatan pemerintah daerah dan komunitas dalam perencanaan dan pengawasan distribusi pangan.
 
-## 🟨 Cluster -1 – Perhatian Khusus / Tertinggal dan Tidak Merata
+### 🟨 Cluster -1 – Perhatian Khusus / Tertinggal dan Tidak Merata
 Wilayah-wilayah dalam klaster ini memiliki karakteristik yang variatif dan kompleks. Sebagian memiliki populasi sangat besar tapi tetap rentan (DBSCAN), sebagian lain menunjukkan kombinasi indikator sedang-tinggi namun tidak homogen (HDBSCAN). Mereka tidak sepenuhnya ekstrem, namun menunjukkan pola risiko yang tidak konsisten.
 
 Rekomendasi kebijakan:
