@@ -71,6 +71,11 @@ Hasil dari DBSCAN menunjukkan tiga kelompok: klaster utama yang mencakup 493 kab
 
 # Clustering DBSCAN
 
+<div align="center">
+  
+![DBSCAN](https://github.com/mmmdrizal/Significant-Insight/blob/main/Image/Viasualisasi%20Klaster%20-%20DBSCAN.png)
+</div>
+
 | Cluster | NCPR   | Kemiskinan (%) | Tanpa Air Bersih (%) | Angka Harapan Hidup (tahun) | Jumlah Penduduk (Rasio) | Tanpa Listrik (%) |
 |----------------|--------|----------------|------------------------|-----------------------------|--------------------------|--------------------|
 | -1             | 3.68   | 26.74          | 64.81                  | 63.82                       | 1,013,888                | 33.16              |
@@ -82,6 +87,12 @@ Berdasarkan hasil clustering menggunakan metode DBSCAN, ditemukan tiga kelompok 
 Sementara itu, Cluster 0 mencakup mayoritas wilayah (493 kabupaten/kota) yang menunjukkan kondisi relatif stabil. Tingkat kemiskinan cukup rendah (10,88%), akses air dan listrik memadai, dan angka harapan hidup berada di kisaran tertinggi (70,15 tahun). Wilayah dalam klaster ini cenderung mandiri dan bisa difokuskan pada pemeliharaan serta penguatan program yang sudah berjalan. Klaster ini diberi nama Stabil dan Mandiri. Di sisi lain, terdapat 12 wilayah yang tergolong outlier (Cluster -1), dengan ciri populasi besar (lebih dari 1 juta), namun masih memiliki tingkat kemiskinan tinggi, akses listrik dan air bersih yang buruk, serta angka harapan hidup rendah. Karena sifatnya yang tidak masuk ke dalam pola umum dan memiliki beban tinggi, kelompok ini disebut Perhatian Khusus.
 
 # Clustering HDBSCAN
+
+<div align="center">
+  
+![HDBSCAN](https://github.com/mmmdrizal/Significant-Insight/blob/main/Image/Viasualisasi%20Klaster%20-%20HDBSCAN.png)
+</div>
+
 | Cluster | NCPR   | Kemiskinan (%) | Tanpa Air Bersih (%) | Angka Harapan Hidup (tahun) | Jumlah Penduduk (Rasio) | Tanpa Listrik (%) |
 |-----------------|--------|----------------|------------------------|-----------------------------|--------------------------|--------------------|
 | -1              | 3.77   | 25.95          | 65.37                  | 64.30                       | 656,779                 | 25.97              |
